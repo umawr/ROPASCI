@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Nabla&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=VT323&display=swap"
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
@@ -19,9 +19,7 @@
           <p class="youText">You</p>
           <p class="youScore">23</p>
         </div>
-        <div class="versus">
-          against
-        </div>
+        <div class="versus">against</div>
         <div class="umair">
           <p class="umairScore">18</p>
           <p class="umairText">Umair</p>
@@ -29,15 +27,37 @@
       </header>
       <main class="main">
         <div class="rock">
-          <img src="rock4.png" class="rockImage" />
+          <button class="rockButton">
+            <img src="rock4.png" class="rockImage" />
+          </button>
         </div>
         <div class="paper">
-          <img src="paper5.png" class="paperImage" />
+          <button class="paperButton">
+            <img src="paper5.png" class="paperImage" />
+          </button>
         </div>
         <div class="scissors">
-          <img src="scissors5.png" class="scissorsImage" />
+          <button class="scissorsButton">
+            <img src="scissors4.png" class="scissorsImage" />
+          </button>
         </div>
       </main>
+      <footer class="logContainer">
+        <div class="youLog">
+          <li class="youMove">Paper</li>
+          <li class="youMove">Rock</li>
+          <li class="youMove">Scissors</li>
+          <li class="youMove">Paper</li>
+          <li class="youMove">Paper</li>
+        </div>
+        <div class="umairLog">
+          <li class="umairMove">Rock</li>
+          <li class="umairMove">Rock</li>
+          <li class="umairMove">Scissors</li>
+          <li class="umairMove">Rock</li>
+          <li class="umairMove">Paper</li>
+        </div>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
