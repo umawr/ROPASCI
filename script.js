@@ -84,3 +84,36 @@ function youMove(choice) {
     hasStarted = false;
   });
 }
+
+// Old Logic, pretty wet.
+
+// if (umairMove === 'rock' && userChoice === 'rock') {
+//     console.log('Try Again');
+//     document.querySelector('.decision').innerHTML = 'Try Again';
+//   } else if (umairMove === 'rock' && userChoice === 'paper') {
+//     console.log('You Win');
+//     document.querySelector('.decision').innerHTML = 'You Win';
+//   } else if (umairMove === 'rock' && userChoice === 'scissors') {
+//     console.log('Umair Wins');
+//     document.querySelector('.decision').innerHTML = 'Umair Wins';
+//   }
+//   if (umairMove === 'paper' && userChoice === 'rock') {
+//     console.log('You Win');
+//     document.querySelector('.decision').innerHTML = 'You Win';
+//   } else if (umairMove === 'paper' && userChoice === 'paper') {
+//     console.log('Try Again');
+//     document.querySelector('.decision').innerHTML = 'Try Again';
+//   } else if (umairMove === 'paper' && userChoice === 'scissors') {
+//     console.log('Umair Wins');
+//     document.querySelector('.decision').innerHTML = 'Umair Wins';
+//   }
+//   if (umairMove === 'scissors' && userChoice === 'rock') {
+//     console.log('You Win');
+//     document.querySelector('.decision').innerHTML = 'You Win';
+//   } else if (umairMove === 'scissors' && userChoice === 'paper') {
+//     console.log('Umair Wins');
+//     document.querySelector('.decision').innerHTML = 'Umair Wins';
+//   } else if (umairMove === 'scissors' && userChoice === 'scissors') {
+//     console.log('Try Again');
+//     document.querySelector('.decision').innerHTML = 'Try Again';
+//   }
