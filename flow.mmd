@@ -1,0 +1,40 @@
+---
+config:
+  layout: dagre
+  theme: dark
+---
+flowchart TD
+    Start([User Clicks Rock/Paper/Scissors]) --> CheckStart{hasStarted?}
+    CheckStart -->|No| ClearLogs[Clear all logs]
+    CheckStart -->|Yes| SkipClear[Skip clear]
+    ClearLogs --> SetStart[Set hasStarted = true]
+    SkipClear --> GenRandom[Generate random number]
+    SetStart --> GenRandom
+    GenRandom --> RandCheck{Random value?}
+    RandCheck -->|0-0.33| UmairRock[Umair = rock]
+    RandCheck -->|0.33-0.67| UmairPaper[Umair = paper]
+    RandCheck -->|0.67-1| UmairScissors[Umair = scissors]
+    UmairRock --> LogUmair[Log Umair's move]
+    UmairPaper --> LogUmair
+    UmairScissors --> LogUmair
+    LogUmair --> UserChoice[Set userChoice from input]
+    UserChoice --> LogUser[Log user's move]
+    LogUser --> CompareGame{Compare moves}
+    CompareGame -->|Same move| ResultTie[Result: Try Again]
+    CompareGame -->|Umair beats user| ResultUmair[Result: Umair Wins]
+    CompareGame -->|User beats Umair| ResultUser[Result: You Win]
+    ResultTie --> UpdateScore{Update scores}
+    ResultUmair --> UpdateScore
+    ResultUser --> UpdateScore
+    UpdateScore -->|User Win| IncUser[Increment youScore]
+    UpdateScore -->|Umair Win| IncUmair[Increment umairScore]
+    UpdateScore -->|Tie| NoScore[No score change]
+    IncUser --> LogResult[Log result]
+    IncUmair --> LogResult
+    NoScore --> LogResult
+    LogResult --> End([Game round complete])
+    
+    Reset[Reset button clicked] --> ResetScores[Set both scores to 0]
+    ResetScores --> ResetLogs[Clear all logs]
+    ResetLogs --> ResetStart[Set hasStarted = false]
+    ResetStart --> ResetEnd([Ready for new game])
