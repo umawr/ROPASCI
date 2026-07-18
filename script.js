@@ -3,7 +3,18 @@
 let userChoice = null;
 let hasStarted = false;
 
+const clickSound = new Audio('click2.1.mp3');
+const resetSound = new Audio('reset2.1.mp3'); 
+
+function playSound(audio) {
+  audio.currentTime = 0;
+  audio.play();
+}
+
+
 function youMove(choice) {
+
+  playSound(clickSound);
 
   const decisionLog = document.querySelector('.decision');
   const youMoveLog = document.querySelector('.youMove');
@@ -15,7 +26,6 @@ function youMove(choice) {
     umairMoveLog.innerHTML = '';
     hasStarted = true;
   }
-
 
   const random = Math.random();
   let umairMove;
@@ -82,6 +92,8 @@ function youMove(choice) {
 }
 const resetButton = document.querySelector('.name');
 resetButton.addEventListener('click', () => {
+  playSound(resetSound);
+
   document.querySelector('.youScore').innerHTML = 0;
   document.querySelector('.umairScore').innerHTML = 0;
   document.querySelector('.decision').innerHTML = 'Choose an Option';
@@ -89,6 +101,7 @@ resetButton.addEventListener('click', () => {
   document.querySelector('.umairMove').innerHTML = "Umair's Moves";
   hasStarted = false;
 });
+
 
 // Old Logic, pretty wet.
 
