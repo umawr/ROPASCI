@@ -3,10 +3,10 @@
 let userChoice = null;
 let hasStarted = false;
 
-const rockClickSound = new Audio('sounds/rockclick2.mp3');
-const paperClickSound = new Audio('sounds/paperclick2.mp3');
-const scissorsClickSound = new Audio('sounds/scissorsclick2.mp3');
-const resetSound = new Audio('sounds/reset3.1.mp3');
+const rockClickSound = new Audio('rockclick2.mp3');
+const paperClickSound = new Audio('paperclick2.mp3');
+const scissorsClickSound = new Audio('scissorsclick2.mp3');
+const resetSound = new Audio('reset3.1.mp3');
 
 function playSound(audio) {
   audio.currentTime = 0;
