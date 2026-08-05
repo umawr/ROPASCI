@@ -1,5 +1,5 @@
 # Ropasci  
-roh-PAH-chee (Italian-kinda)  
+roh-PAH-chee   
   
 You are the player, Umair is the computer.  
 Consider increasing the sound.  
