@@ -1,0 +1,55 @@
+---
+config:
+  layout: dagre
+  theme: dark
+---
+flowchart TD
+    Start([User Clicks Button]) --> CheckSound{Which Button
+Clicked?}
+    CheckSound -->|Rock| PlayRockSound[Play Rock Sound]
+    CheckSound -->|Paper| PlayPaperSound[Play Paper Sound]
+    CheckSound -->|Scissors| PlayScissorsSound[Play Scissors Sound]
+    PlayRockSound --> SetUserChoice1[Set userChoice = rock]
+    PlayPaperSound --> SetUserChoice2[Set userChoice = paper]
+    PlayScissorsSound --> SetUserChoice3[Set userChoice = scissors]
+    SetUserChoice1 --> CheckStart{hasStarted?}
+    SetUserChoice2 --> CheckStart
+    SetUserChoice3 --> CheckStart
+    CheckStart -->|No| ClearLogs[Clear Decision, You Move, Umair Move Logs]
+    CheckStart -->|Yes| SkipClear[Continue]
+    ClearLogs --> SetFlag[Set hasStarted = true]
+    SetFlag --> GenerateRandom[Generate Random Number]
+    SkipClear --> GenerateRandom
+    GenerateRandom --> DecideUmair{Random Value?}
+    DecideUmair -->|0 to 1/3| UmairRock[umairMove = rock]
+    DecideUmair -->|1/3 to 2/3| UmairPaper[umairMove = paper]
+    DecideUmair -->|2/3 to 1| UmairScissors[umairMove = scissors]
+    UmairRock --> LogUmair[Log Umair Move]
+    UmairPaper --> LogUmair
+    UmairScissors --> LogUmair
+    LogUmair --> UpdateUmairDisplay[Update Umair Move Display]
+    UpdateUmairDisplay --> KeepUmairRecent[Keep Last 4 Moves]
+    KeepUmairRecent --> LogPlayer[Log Your Move]
+    LogPlayer --> UpdatePlayerDisplay[Update You Move Display]
+    UpdatePlayerDisplay --> KeepPlayerRecent[Keep Last 4 Moves]
+    KeepPlayerRecent --> DeterminWinner{Determine Winner}
+    DeterminWinner -->|Same Choice| ResultTie[result = Try Again]
+    DeterminWinner -->|Umair Beats You| ResultLose[result = Umair Wins]
+    DeterminWinner -->|You Beat Umair| ResultWin[result = You Win]
+    ResultTie --> DisplayResult[Display Result]
+    ResultLose --> DisplayResult
+    ResultWin --> DisplayResult
+    DisplayResult --> KeepResultRecent[Keep Last 4 Results]
+    KeepResultRecent --> UpdateScore{Update Score}
+    UpdateScore -->|You Win| IncrementYou[youScore + 1]
+    UpdateScore -->|Umair Wins| IncrementUmair[umairScore + 1]
+    UpdateScore -->|Try Again| NoChange[No Score Change]
+    IncrementYou --> End([Round Complete])
+    IncrementUmair --> End
+    NoChange --> End
+    Reset([Reset Button Clicked]) --> PlayResetSound[Play Reset Sound]
+    PlayResetSound --> ResetScores[Set Both Scores to 0]
+    ResetScores --> ResetDecision[Reset Decision Display]
+    ResetScores --> ResetLogs[Reset Move Logs]
+    ResetLogs --> ResetFlag[Set hasStarted = false]
+    ResetFlag --> ResetEnd([Game Reset])
