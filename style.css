@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: row;
   font-size: 7rem;
-  font-family: "Honk", system-ui;
+  font-family: 'Honk', system-ui;
   cursor: default;
 }
 .you,
@@ -47,7 +47,7 @@
   text-align: center;
 }
 .against {
-  font-family: "Press Start 2P", system-ui;
+  font-family: 'Press Start 2P', system-ui;
   font-size: 0.8rem;
   background: linear-gradient(
     to bottom,
@@ -61,7 +61,7 @@
 }
 .name {
   font-size: 4rem;
-  font-family: "Honk", system-ui;
+  font-family: 'Honk', system-ui;
   background-color: var(--base-color);
   border: var(--base-color);
 }
@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: row;
   padding: 0.5rem 1rem;
-  font-family: "Press Start 2P", system-ui;
+  font-family: 'Press Start 2P', system-ui;
   cursor: default;
 }
 .youLog,
@@ -167,7 +167,9 @@
 .decisionContainer {
   text-align: center;
 }
-.decision{
+.decision {
   height: 100%;
   width: 100%;
 }
+
+/* umairumairumairumairumair */
