@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROPASCI a game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="you">
+          <p class="youText">You</p>
+          <p class="youScore">0</p>
+        </div>
+        <div class="versus">
+          <button class="name">
+            <p>ROPASCI</p>
+          </button>
+          <p class="against">AGAINST</p>
+        </div>
+        <div class="umair">
+          <p class="umairScore">0</p>
+          <p class="umairText">Umair</p>
+        </div>
+      </header>
+      <div class="main">
+        <div class="rock">
+          <button class="rockButton btn" onclick="youMove('rock')">
+            <img src="images/rock4.png" class="rockImage" alt="rock" />
+          </button>
+        </div>
+        <div class="paper">
+          <button class="paperButton btn" onclick="youMove('paper')">
+            <img src="images/paper5.png" class="paperImage" alt="paper" />
+          </button>
+        </div>
+        <div class="scissors">
+          <button class="scissorsButton btn" onclick="youMove('scissors')">
+            <img
+              src="images/scissors4.png"
+              class="scissorsImage"
+              alt="scissors"
+            />
+          </button>
+        </div>
+      </div>
+      <footer class="logContainer">
+        <div class="youLog">
+          <p class="youMove">Your Moves</p>
+        </div>
+        <div class="decisionContainer">
+          <p class="decision">Choose an Option</p>
+        </div>
+        <div class="umairLog">
+          <p class="umairMove">Umair's Moves</p>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
