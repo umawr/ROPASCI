@@ -3,10 +3,9 @@ roh-PAH-chee
   
 You are the player, Umair is the computer.  
 Consider increasing the sound.  
-Press the "ROPASCI" button to reset score.   
-I think I did a great job with the retro theme of the game, especially  
-the images and sound effects. The rock-paper-scissors images look amazing.  
+Press the "ROPASCI" button to reset score.     
 I made the images with Claude and Gemini, and the sound effects with Eleven Labs.  
+  
 Video on YT-
 https://youtu.be/tSWT2wGdrLk  
   
