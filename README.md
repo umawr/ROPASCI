@@ -8,7 +8,8 @@ I think I did a great job with the retro theme of the game, especially
 the images and sound effects. The rock-paper-scissors images look amazing.  
 I made the images with Claude and Gemini, and the sound effects with Eleven Labs.  
 Video on YT-
-https://youtu.be/tSWT2wGdrLk
+https://youtu.be/tSWT2wGdrLk  
+  
 My Channel-  
            
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/@umawr)
